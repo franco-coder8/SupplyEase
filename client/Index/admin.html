@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard</title>
+    <link rel="stylesheet" href="/client/CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <button id="close-sidebar" class="close-sidebar">✖</button>
+            <div class="menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li>Dashboard</li>
+                    <li>Orders</li>
+                    <li>Inventory</li>
+                    <li>Suppliers</li>
+                    <li>Customers</li>
+                    <li>Payments</li>
+                    <li>User Management</li>
+                    <li>Feedback & Support</li>
+                    <li>Settings</li>
+                </ul>
+            </div>
+        </nav>
+        <main class="content">
+            <header class="header">
+                <div class="top-bar">
+                    <button id="burger" class="burger">
+                        <span class="burger-icon">☰</span>
+                        <span class="close-icon" style="display:none;">✖</span>
+                    </button>
+                    <span class="logo"></span>
+                    <input type="search" placeholder="Search...">
+                    <div class="user">
+                        <span class="bell" id="bell">🔔</span>
+                        <span class="share">Share</span>
+                        <span class="profile">👤</span>
+                    </div>
+                </div>
+            </header>
+            <div class="dashboard">
+                <div class="status-cards">
+                    <div class="card approved">
+                        <h3>Approved</h3>
+                        <p>5,678</p>
+                        <span>+20% month over month</span>
+                    </div>
+                    <div class="card pending">
+                        <h3>Pending</h3>
+                        <p>2,405</p>
+                        <span>+33% month over month</span>
+                    </div>
+                    <div class="card rejected">
+                        <h3>Rejected</h3>
+                        <p>353</p>
+                        <span>-8% month over month</span>
+                    </div>
+                </div>
+                <div class="monthly-report">
+                    <h3>Monthly Report</h3>
+                    <div class="chart">
+                        <!-- Placeholder for a line chart -->
+                        <img src="chart-placeholder.png" alt="Monthly Report Chart">
+                    </div>
+                </div>
+                <div class="recent-activities">
+                    <h3>Recent Activities</h3>
+                    <table>
+                        <tr>
+                            <th>Source</th>
+                            <th>Sessions</th>
+                            <th>Change</th>
+                        </tr>
+                        <tr>
+                            <td>Source 1</td>
+                            <td>4321</td>
+                            <td>+84%</td>
+                        </tr>
+                        <tr>
+                            <td>Source 2</td>
+                            <td>4033</td>
+                            <td>-8%</td>
+                        </tr>
+                        <tr>
+                            <td>Source 3</td>
+                            <td>3128</td>
+                            <td>+2%</td>
+                        </tr>
+                        <tr>
+                            <td>Source 4</td>
+                            <td>2104</td>
+                            <td>+33%</td>
+                        </tr>
+                        <tr>
+                            <td>Source 5</td>
+                            <td>2003</td>
+                            <td>+30%</td>
+                        </tr>
+                        <tr>
+                            <td>Source 6</td>
+                            <td>1894</td>
+                            <td>+15%</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="new-customers">
+                    <h3>New Customers</h3>
+                    <ul>
+                        <li>Helena - email@figmasfakedomain.net</li>
+                        <li>Oscar - email@figmasfakedomain.net</li>
+                        <li>Daniel - email@figmasfakedomain.net</li>
+                        <li>Daniel Jay Park - email@figmasfakedomain.net</li>
+                        <li>Mark Rojas - email@figmasfakedomain.net</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/client/JS/admin.js"></script>
+</body>
+</html>
