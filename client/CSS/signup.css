@@ -23,6 +23,13 @@ header {
 header .logo {
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    align-items: center; /* Center image vertically */
+}
+
+header .logo img {
+    max-height: 40px; /* Adjust height as needed */
+    margin-right: 10px; /* Space between logo text and image */
 }
 
 header .search-bar {
@@ -68,7 +75,7 @@ main {
 
 .main-left {
     flex: 2;
-    background: url('your-image-path.jpg') no-repeat center center/cover;
+    background: url('https://raw.githubusercontent.com/franco-coder8/supplyease/master/client/Index/imgs/supply%20ease%20logo2.png') no-repeat center center/cover;
     position: relative;
 }
 
@@ -78,6 +85,11 @@ main {
     left: 50px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-left .overlay-text img {
+    max-width: 100%; /* Ensure the image fits within the text overlay */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .main-left .overlay-text h1 {
@@ -157,8 +169,9 @@ footer {
 }
 
 .footer-logo img {
-    width: 50px;
-    margin-right: 10px;
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
 }
 
 .footer-links {
