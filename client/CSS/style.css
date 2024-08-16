@@ -11,7 +11,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('https://raw.githubusercontent.com/franco-coder8/supplyease/master/client/Index/imgs/online-school-equipment-home.jpg') no-repeat center center fixed;
+    background: url('https://example.com/path-to-your-background-image.jpg') no-repeat center center fixed; /* Update URL */
     background-size: cover;
 }
 
@@ -33,7 +33,7 @@ body, html {
 /* Left section (with background image behind the logo) */
 .form-left-section {
     flex: 1; /* Ensure the left section takes up 50% of the container */
-    background: url('https://raw.githubusercontent.com/franco-coder8/supplyease/master/client/Index/imgs/online-school-equipment-home.jpg') no-repeat center center;
+    background: url('https://raw.githubusercontent.com/franco-coder8/supplyease/6a8ec496415f68f2c658864b81a8497a8c41c270/client/imgs/background2.jpg') no-repeat center center; /* Update URL */
     background-size: cover; /* Ensure the image covers the entire section */
     display: flex;
     justify-content: center;
@@ -41,25 +41,16 @@ body, html {
     height: 100%; /* Ensure it takes the full height of its parent */
     color: white;
     text-align: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .branding {
     text-align: center;
-    width: 100%; /* Ensure the logo is centered */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .logo {
     max-width: 80%; /* Scale the logo to fit better in the resized left container */
     margin-bottom: 20px;
-    object-fit: contain; /* Ensures the logo scales properly without distortion */
 }
-
 
 /* Right section (form area) */
 .form-right-section {
