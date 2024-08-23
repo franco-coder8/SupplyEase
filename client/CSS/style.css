@@ -11,62 +11,99 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('https://example.com/path-to-your-background-image.jpg') no-repeat center center fixed; /* Update URL */
+    background: url('https://raw.githubusercontent.com/franco-coder8/SupplyEase/main/client/imgs/online-school-equipment-home.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
-/* Main container */
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background: linear-gradient(135deg, #007bff, #00aaff);
+    opacity: 0.9;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Burger menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Navbar links */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main container aligned to the right */
 .main-container {
     display: flex;
-    justify-content: center;
-    align-items: stretch; /* Ensure the child elements (left and right sections) stretch to fill the container */
-    width: 100%; /* Adjust the width to take up more space */
-    max-width: 1400px; /* Increase the max-width to make the container wider */
-    min-height: 800px; /* Increase the height of the container */
-    background-color: #ffffff;
+    justify-content: flex-end; /* Aligns content to the right */
+    align-items: center;
+    width: 50%; /* Reduced width to align it to the right */
+    max-width: 600px; /* Adjusted max width */
+    min-height: 80vh;
+    background-color: rgba(64, 64, 64, 0.7); /* Grey and transparent background */
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 20px; /* Added padding */
+    position: absolute;
+    right: 0; /* Align the box to the right side */
+    margin-right: 50px; /* Adds some space from the edge */
 }
 
-/* Left section (with background image behind the logo) */
-.form-left-section {
-    flex: 1; /* Ensure the left section takes up 50% of the container */
-    background: url('https://raw.githubusercontent.com/franco-coder8/supplyease/6a8ec496415f68f2c658864b81a8497a8c41c270/client/imgs/background2.jpg') no-repeat center center; /* Update URL */
-    background-size: cover; /* Ensure the image covers the entire section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ensure it takes the full height of its parent */
-    color: white;
-    text-align: center;
-}
-
-.branding {
-    text-align: center;
-}
-
-.logo {
-    max-width: 80%; /* Scale the logo to fit better in the resized left container */
-    margin-bottom: 20px;
-}
-
-/* Right section (form area) */
+/* Right section (form area with logo) */
 .form-right-section {
-    flex: 1; /* Ensure the right section takes up 50% of the container */
-    background-color: #f8f8f8;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding: 40px;
+    align-items: center;
+    padding: 20px;
+    color: white; /* White text color for better contrast */
 }
 
 .form-right-section h2 {
     margin-bottom: 20px;
-    color: #007bff;
-    font-size: 1.8em; /* Adjust font size */
+    color: white;
+    font-size: 2.5em;
 }
 
 .form-right-section form {
@@ -74,77 +111,152 @@ body, html {
 }
 
 .form-right-section form label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     display: block;
-    color: #333;
-    font-size: 1.2em; /* Adjust font size */
+    color: white;
+    font-size: 1.4em;
 }
 
 .form-right-section form input,
-.form-right-section form select { /* This includes the role dropdown */
+.form-right-section form select {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 1.1em; /* Adjust font size */
+    font-size: 1.2em;
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.8); /* Light grey background for inputs */
+    color: #333; /* Dark text color for inputs */
+}
+
+.form-right-section form input:focus,
+.form-right-section form select:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+    padding: 15px;
+    background-color: rgba(64, 64, 64, 0.7); /* Same as the main container background */
+    color: white; /* White text color for better contrast */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2em; /* Adjust font size */
+    font-size: 1.4em;
+    transition: background-color 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+    background-color: rgba(200, 200, 200, 0.8); /* Light gray on hover */
 }
 
 p {
-    color: #333;
-    font-size: 1.1em; /* Adjust font size */
+    color: white;
+    font-size: 1.2em;
 }
 
-.hidden {
+/* Logo styling */
+.logo {
+    max-width: 100%; /* Full width */
+    height: auto;
+    margin-bottom: 20px;
+    align-self: center; /* Align the logo with the box */
+}
+.success-message,
+.error-message {
+    display: none; /* Initially hidden */
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success-message {
+    color: green;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.error-message {
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+.error-message {
     display: none;
 }
 
+.error-message.visible {
+    display: block;
+}
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    .main-container {
-        width: 90%;
-        flex-direction: column; /* Stack the sections vertically on mobile */
+    .burger-menu {
+        display: flex;
     }
 
-    .form-left-section, .form-right-section {
+    .navbar ul {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background: linear-gradient(135deg, #007bff, #00aaff);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: left 0.3s ease;
+    }
+
+    .navbar ul li {
+        margin: 15px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 1.5em;
+    }
+
+    .navbar ul.show {
+        left: 0;
+    }
+
+    .main-container {
+        width: 95%;
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .form-right-section {
         flex: none;
         width: 100%;
         padding: 20px;
         text-align: center;
-    }
-
-    .form-left-section {
-        padding: 30px;
-    }
-
-    .form-right-section h2 {
-        text-align: center;
-    }
-
-    .form-right-section form {
         align-items: center;
     }
 
-    .form-right-section form label, .form-right-section form input, .submit-btn {
-        text-align: left;
+    .form-right-section h2 {
+        font-size: 2em;
+    }
+
+    .form-right-section form label {
+        font-size: 1.2em;
+    }
+
+    .form-right-section form input,
+    .form-right-section form select {
+        font-size: 1.1em;
     }
 
     .submit-btn {
-        text-align: center;
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    .logo {
+        max-width: 70%;
+        margin-bottom: 20px;
     }
 }

@@ -3,67 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SupplyEase - Login</title>
+    <title>Supply Ease</title>
     <link rel="stylesheet" href="/client/CSS/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="https://github.com/franco-coder8/supplyease/blob/master/client/Index/imgs/supply%20ease%20logo2.png" alt="SupplyEase Logo">
-        </div>
-        <div class="header-right">
-            <select>
-                <option>English (US)</option>
-            </select>
-            <div class="user-icon">👤</div>
-        </div>
-    </header>
-    <main>
-        <section class="main-left">
-            <div class="overlay-text">
-                <img src="https://raw.githubusercontent.com/franco-coder8/supplyease/master/client/Index/imgs/supply%20ease%20logo2.png" alt="SupplyEase Logo">
+    <div class="main-container">
+        <!-- Left section (branding) -->
+        <div class="form-left-section">
+            <div class="branding">
+                <img src="https://raw.githubusercontent.com/franco-coder8/SupplyEase/main/client/imgs/supply%20ease%20logo2.png" alt="Supply Ease Logo" class="logo">
             </div>
-        </section>
-        <section class="main-right">
-            <div class="register-box">
+        </div>
+
+        <!-- Right section (forms) -->
+        <div class="form-right-section">
+            <!-- Login Container -->
+            <div id="loginContainer">
+                <h2>Login</h2>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <button type="submit" class="submit-btn">Log in</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="showRegister()">Sign up here</a></p>
+            </div>
+
+            <!-- Register Container -->
+            <div id="registerContainer" style="display: none;">
                 <h2>Register</h2>
                 <form>
-                    <select>
-                        <option>Select Role</option>
-                        <option>Administrator</option>
-                        <option>Supplier</option>
-                        <option>Customer</option>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required>
+
+                    <label for="role">Select Role</label>
+                    <select id="role" name="role">
+                        <option value="admin">Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="supplier">Supplier</option>
+                        <option value="customer">Customer</option>
                     </select>
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Confirm Password">
-                    <button type="submit">REGISTER</button>
+
+                    <button type="submit" class="submit-btn">Register</button>
                 </form>
-                <div class="social-login">
-                </div>
-                <p>Already have an account? <a href="#">Login</a></p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-links">
-            <div>
-                <h3>SERVICE</h3>
-                <a href="#">3D Model</a>
-                <a href="#">Contact Us</a>
-            </div>
-            <div>
-                <h3>SUPPORT</h3>
-                <a href="#">About SupplyEase</a>
-                <a href="#">Privacy Policy & Terms</a>
-            </div>
-            <div>
-                <h3>FOLLOW US ON</h3>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Log in here</a></p>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <script src="/client/JS/script.js"></script>
 </body>
 </html>
